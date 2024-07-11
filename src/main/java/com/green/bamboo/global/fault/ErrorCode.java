@@ -11,7 +11,7 @@ public enum ErrorCode {
 
     ErrorCode(HttpStatus httpStatus, String errorCode, String message) {
         this.httpStatus = httpStatus;
-        this.errorCode = errorC≠ode;
+        this.errorCode = errorCode;
         this.message = message;
     }
 
