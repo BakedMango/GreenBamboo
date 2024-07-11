@@ -1,7 +1,9 @@
 package com.green.bamboo.global.fault;
 
 import com.green.bamboo.global.fault.apierror.ApiError;
+import com.green.bamboo.global.fault.exception.BusinessException;
 import com.green.bamboo.global.fault.exception.EntityNotFoundException;
+import com.green.bamboo.global.util.ApiUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.core.Ordered;
@@ -210,7 +212,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
     private ResponseEntity<Object> buildResponseEntity(ApiError apiError) {
-        return new ResponseEntity<>(apiError, apiError.getStatus());
+        return new ResponseEntity<>(ApiUtils.error(apiError), apiError.getStatus());
     }
 
 }
