@@ -38,8 +38,7 @@ dependencies {
     runtimeOnly 'com.h2database:h2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-    runtimeOnly 'com.h2database:h2' // H2 데이터베이스
-    runtimeOnly 'mysql:mysql-connector-java' // MySQL
+//    runtimeOnly 'mysql:mysql-connector-java' // MySQL
 }
 
 tasks.named('test') {
